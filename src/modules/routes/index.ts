@@ -16,8 +16,8 @@ const opts = {
 async function routes(fastify:any, options:any) {
     // 声明一个包含输入 schema 的路由
     fastify.get('/api', opts, function (request:any, reply:any) {
-        console.log(request)
-        console.log(reply)
+        // console.log(request)
+        // console.log(reply)
         reply.send({ sex: 'nan',name:'qq' })
     })
 

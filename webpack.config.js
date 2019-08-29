@@ -9,12 +9,10 @@ jslist.forEach(v=>{
   entrylist[name] = v
 })
 
-
-
 module.exports = {
   entry: entrylist,
   output: {
-    path: path.resolve(__dirname, './public/newstatic/js/'),
+    path: path.resolve(__dirname, './public/js/'),
     filename: '[name].js'
   },
   module: {

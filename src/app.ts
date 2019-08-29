@@ -1,9 +1,13 @@
-const app = require('fastify')()
+const app = require('fastify')({ logger:true})
 const rt = require('./modules/routes')
 const pointofview = require('point-of-view')
 const ejs = require('ejs')
 const ejsmate = require('ejs-mate')
 
+//静态文件路径配置
+const serveStatic = require('serve-static')
+const path = require('path')
+app.use(serveStatic('public'))
 
 app.register( pointofview , {
     engine: {
